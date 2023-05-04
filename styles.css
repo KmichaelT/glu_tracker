@@ -1,0 +1,33 @@
+/* ... Previous CSS ... */
+
+.add-entry-btn {
+    font-size: 2rem;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .add-entry-btn:hover {
+    background-color: #45a049;
+  }
+  
+  @media (max-width: 480px) {
+    th, td {
+      font-size: 0.7rem;
+    }
+  
+    input, select {
+      font-size: 0.8rem;
+    }
+  }
+  

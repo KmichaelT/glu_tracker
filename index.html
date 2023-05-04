@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glucose Level Tracker</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h2 class="text-center p-4">Glucose Level Tracker</h2>
+  </header>
+  <main>
+    <button id="add-entry" class="add-entry-btn" data-toggle="modal" data-target="#glucose-form-modal">+</button>
+    <table id="glucose-table" class="table table-striped">
+      <thead>
+        <tr>
+
+          <th scope="col">Time</th>
+          <th scope="col">Glu-Level</th>
+          <th scope="col">Feeling</th>
+          <th scope="col">Meal</th>
+        </tr>
+      </thead>
+      <tbody id="glucose-data">
+      </tbody>
+    </table>
+  </main>
+
+  <!-- Glucose Form Modal -->
+  <div class="modal fade" id="glucose-form-modal" tabindex="-1" role="dialog" aria-labelledby="glucoseFormModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="glucoseFormModalLabel">Add Glucose Entry</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="glucose-form">
+            <div class="form-group">
+              <input type="number" id="glucose-level" name="glucose-level" class="form-control" placeholder="Glucose Level" required>
+            </div>
+            <div class="form-group">
+              <input type="text" id="feeling" name="feeling" class="form-control" placeholder="Feeling" required>
+            </div>
+            <div class="form-group">
+              <select id="meal-status" name="meal-status" class="form-control" required>
+                <option value="before_meal">Before Meal</option>
+                <option value="after_meal">After Meal</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Entry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
